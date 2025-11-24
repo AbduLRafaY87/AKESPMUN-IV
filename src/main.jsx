@@ -1,38 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import HomePage from "./pages/home/HomePage";
-import AboutPage from "./pages/about/AboutPage";
-import TeamPage from "./pages/team/TeamPage";
-import CommitteesPage from "./pages/committees/CommitteesPage";
-import RegistrationsPage from "./pages/registrations/RegistrationsPage";
-import ContactPage from "./pages/contact/ContactPage";
-import NotFoundPage from "./components/NotFoundPage";
+import "./styles/globle.css";
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/team" element={<TeamPage />} />
-            <Route path="/committees" element={<CommitteesPage />} />
-            <Route path="/registrations" element={<RegistrationsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
-};
+import App from "./App";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
