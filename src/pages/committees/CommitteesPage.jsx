@@ -11,7 +11,7 @@ const CommitteeCard = ({ name, image, pdf }) => {
         href={pdf}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex flex-col items-center justify-center p-6 w-80 h-70 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border border-transparent hover:border-[#2a2a2a] hover:scale-103"
+        className="relative flex flex-col items-center justify-center p-6 w-85 h-75 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border border-transparent hover:border-[#2a2a2a] hover:scale-103"
       >
         <img src={image} alt={name} className="w-55 h-55 mb-3" /> {/* Logo */}
         {/* <div className="text-4xl">{icon}</div>

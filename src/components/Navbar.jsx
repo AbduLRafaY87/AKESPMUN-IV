@@ -49,7 +49,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Nav Links */}
-        <ul className="hidden md:flex gap-2 text-sm font-medium">
+        <ul className="hidden md:flex gap-2 text-base font-medium">
           {['/', '/committees', '/registrations', '/team', '/about', '/contact'].map((path, index) => (
             <li key={index}>
               <NavLink
