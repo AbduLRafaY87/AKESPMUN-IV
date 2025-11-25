@@ -3,27 +3,27 @@
 /* Root */
 :root {
   /* Main Colors */
-  --bg-primary: #eaeaea;
-  --bg-secondary: #1B3B2F;
-  --bg-accent: #1F3D2B;
+  --bg-primary: #0B1E13;    /* Deep dark green for main background */
+  --bg-secondary: #12291D;  /* Darker green for cards/panels */
+  --bg-accent: #17352A;     /* Slightly lighter accent green for hover states */
   
   /* Accent Colors */
-  --accent-gold: #C0A880;
-  --accent-green: #2ECC71;
-  --highlight-green: #3FD888;
+  --accent-gold: #C0A880;   /* Gold accent remains for highlights */
+  --accent-green: #1A3B28;  /* Subtle dark green for buttons/links */
+  --highlight-green: #1F4C35; /* Dark accent green for highlights */
   
   /* Text Colors */
-  --text-primary: #D6E8D5;
-  --text-secondary: #A8C5A0;
-  --text-muted: #6B8F6E;
-  --text-white: #FFFFFF;
-  --text-dark: #101010;
+  --text-primary: #FFFFFF;  /* White text for contrast */
+  --text-secondary: #FFFFFF; /* White text for secondary elements as well */
+  --text-muted: #CCCCCC;     /* Soft gray for muted text */
+  --text-white: #FFFFFF;     /* Pure white */
+  --text-dark: #101010;      /* Rarely used dark text on light elements */
   
   /* Border & Shadow */
-  --border-color: #2A4D38;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --border-color: #1B3B2F;  /* Dark forest green for borders */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.7);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.9);
   
   /* Spacing System */
   --space-xs: 0.25rem;
