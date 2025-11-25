@@ -52,7 +52,7 @@
 .committees-hero__underline {
   width: 120px;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-green) 100%);
+  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold) 100%);
   margin: 0 auto 1.5rem;
   border-radius: var(--radius-full);
   animation: slideIn 0.8s ease-out 0.2s both;
@@ -121,10 +121,10 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
   border-color: var(--accent-gold);
 }
-
+/* 
 .committee-card:hover::before {
-  /* opacity: 0.1; */
-}
+   opacity: 0.1; 
+} */
 
 .committee-card__content {
   /* position: relative; */

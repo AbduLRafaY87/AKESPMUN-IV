@@ -116,10 +116,10 @@ const CommitteeCard = ({ name, image,agenda, pdf }) => {
           {/* Hover Overlay - Always rendered, controlled by CSS */}
           <div className="committee-card__overlay">
             <h3 className="committee-card__title">{agenda}</h3>
-            <a href={pdf} target="_blank" rel="noopener noreferrer" className="committee-card__badge">
+            {/* <a href={pdf} target="_blank" rel="noopener noreferrer" className="committee-card__badge">
               <i className="fas fa-file-pdf"></i>
               <span href=''>Study Guide</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

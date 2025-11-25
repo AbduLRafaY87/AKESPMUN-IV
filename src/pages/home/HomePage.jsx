@@ -10,9 +10,6 @@ import carouselImageFive from '../../assets/carousel/carouselImage5.png';
 
 // Import other images
 import aboutImage from '../../assets/images/homeAbout.jpg';
-import team1 from '../../assets/team/teamOne.webp';
-import team2 from '../../assets/team/teamTwo.jpg';
-import team3 from '../../assets/team/teamThree.webp';
 
 const carouselImages = [
   carouselImageOne,

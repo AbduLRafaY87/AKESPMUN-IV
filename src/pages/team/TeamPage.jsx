@@ -1,17 +1,17 @@
 // import React from 'react';
 import '../../styles/Team.css';
-import MemberOne from "../../assets/team/teamOne.webp";
-import MemberTwo from "../../assets/team/teamTwo.jpg";
-import MemberThree from "../../assets/team/teamThree.webp";
-import MemberFour from "../../assets/team/teamFour.webp";
-import MemberFive from "../../assets/team/teamFive.webp";
-import MemberSix from "../../assets/team/teamSix.webp";
-import MemberSeven from "../../assets/team/teamSeven.webp";
-import MemberEight from "../../assets/team/teamEight.webp";
-import MemberNine from "../../assets/team/teamNine.jpg";
-import MemberTen from "../../assets/team/teamTen.jpg";
-import MemberEleven from "../../assets/team/teamEleven.jpg";
-import MemberTwelve from "../../assets/team/teamTwelve.jpg";
+// import MemberOne from "../../assets/team/teamOne.webp";
+// import MemberTwo from "../../assets/team/teamTwo.jpg";
+// import MemberThree from "../../assets/team/teamThree.webp";
+// import MemberFour from "../../assets/team/teamFour.webp";
+// import MemberFive from "../../assets/team/teamFive.webp";
+// import MemberSix from "../../assets/team/teamSix.webp";
+// import MemberSeven from "../../assets/team/teamSeven.webp";
+// import MemberEight from "../../assets/team/teamEight.webp";
+// import MemberNine from "../../assets/team/teamNine.jpg";
+// import MemberTen from "../../assets/team/teamTen.jpg";
+// import MemberEleven from "../../assets/team/teamEleven.jpg";
+// import MemberTwelve from "../../assets/team/teamTwelve.jpg";
 
 const Hero = () => {
   return (
@@ -28,30 +28,30 @@ const Hero = () => {
 };
 
 // Team Members Categorized by Department
-const teamData = [
-  {
-    department: "Executive Board",
-    members: [
-      { name: "Syed Ali Arish", role: "Secretary General", image: MemberOne },
-      { name: "Saad Ahmed", role: "Director General", image: MemberTwo },
-      { name: "Hasnain Bin Rashid", role: "Deputy Director General", image: MemberThree },
-      { name: "Muhammad Zubair Ahmed", role: "Patron", image: MemberFive },
-      { name: "M.Ayan Yasir", role: "Under Secretary General", image: MemberFour },
-      { name: "Ayesha Tanveer", role: "Under Secretary General", image: MemberSix },
-      { name: "Mustufa Malik", role: "Under Secretary General", image: MemberSeven },
-      { name: "Aniqa Kamran", role: "Under Secretary General", image: MemberEight },
-    ],
-  },
-  {
-    department: "Department Directors",
-    members: [
-      { name: "Maham Zubairi", role: "Hospitality", image: MemberNine },
-      { name: "Waniya Khayyam", role: "IT & Design", image: MemberTen },
-      { name: "Anas Raza", role: "Media & Photography", image: MemberEleven },
-      { name: "Hasan Sheikh", role: "Social Media", image: MemberTwelve },
-    ],
-  },
-];
+// const teamData = [
+//   {
+//     department: "Executive Board",
+//     members: [
+//       { name: "Syed Ali Arish", role: "Secretary General", image: MemberOne },
+//       { name: "Saad Ahmed", role: "Director General", image: MemberTwo },
+//       { name: "Hasnain Bin Rashid", role: "Deputy Director General", image: MemberThree },
+//       { name: "Muhammad Zubair Ahmed", role: "Patron", image: MemberFive },
+//       { name: "M.Ayan Yasir", role: "Under Secretary General", image: MemberFour },
+//       { name: "Ayesha Tanveer", role: "Under Secretary General", image: MemberSix },
+//       { name: "Mustufa Malik", role: "Under Secretary General", image: MemberSeven },
+//       { name: "Aniqa Kamran", role: "Under Secretary General", image: MemberEight },
+//     ],
+//   },
+//   {
+//     department: "Department Directors",
+//     members: [
+//       { name: "Maham Zubairi", role: "Hospitality", image: MemberNine },
+//       { name: "Waniya Khayyam", role: "IT & Design", image: MemberTen },
+//       { name: "Anas Raza", role: "Media & Photography", image: MemberEleven },
+//       { name: "Hasan Sheikh", role: "Social Media", image: MemberTwelve },
+//     ],
+//   },
+// ];
 
 const TeamPage = () => {
   return (

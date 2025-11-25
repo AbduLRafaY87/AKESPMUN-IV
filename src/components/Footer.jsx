@@ -78,7 +78,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="footer__developer"
           >
-            Prime Creators <i class="fa-solid fa-square-arrow-up-right"></i>
+            Prime Creators <i className="fa-solid fa-square-arrow-up-right"></i>
           </a>
         </p>
       </div>

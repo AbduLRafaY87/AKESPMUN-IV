@@ -381,3 +381,29 @@ a:hover {
   font-size: 4em;
   color: var(--bg-accent);
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;               /* width of vertical scrollbar */
+  height: 12px;              /* height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary); /* dark green track */
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-accent); /* darker green thumb */
+  border-radius: var(--radius-full);
+  border: 3px solid var(--bg-secondary); /* adds padding effect */
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-gold); /* gold highlight on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-secondary);
+}

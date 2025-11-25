@@ -1,34 +1,46 @@
-import  { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo-nobg.png';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  // Ref to detect clicks outside the navbar
+  const navRef = useRef(null);
+  
+  // Location hook to close menu on route change
+  const location = useLocation();
 
+  // Handle Scroll for transparency effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      // Switch to scrolled style after 50px
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Calculate dynamic styles based on scroll
-  const opacity = Math.min(0.7 + scrollY / 25, 0.95);
-  const shadowOpacity = Math.min(scrollY / 10, 1);
-  const blurIntensity = Math.min(2 + scrollY / 1, 10);
+  // Handle Click Outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // If menu is open AND click is NOT inside the navbar ref
+      if (isMenuOpen && navRef.current && !navRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
 
-  const navStyle = {
-    backgroundColor: `rgba(27, 59, 47, ${opacity})`,
-    boxShadow: `0 5px 50px rgba(0, 0, 0, ${shadowOpacity * 0.5})`,
-    backdropFilter: `blur(${blurIntensity}px)`,
-  };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMenuOpen]);
+
+  // Close menu automatically when route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   const navItems = [
     { path: '/', label: 'Home' },
@@ -40,13 +52,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar" style={navStyle}>
+    <nav 
+      className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`} 
+      ref={navRef}
+    >
       <div className="navbar__container">
         {/* Logo */}
         <a href="/" className="navbar__logo">
           <img
             src={logo}
-            alt="Logo"
+            alt="AKESPMUN Logo"
             className="navbar__logo-img"
             onError={(e) => e.target.style.display = 'none'}
           />
@@ -73,12 +88,13 @@ const Navbar = () => {
           className="navbar__toggle"
           onClick={() => setMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
         >
           <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Dropdown */}
       <div className={`navbar__mobile ${isMenuOpen ? 'navbar__mobile--open' : ''}`}>
         <ul className="navbar__mobile-menu">
           {navItems.map((item, index) => (

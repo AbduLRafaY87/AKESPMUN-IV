@@ -51,7 +51,7 @@
 .about-hero__underline {
   width: 120px;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-green) 100%);
+  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold) 100%);
   margin: 0 auto 1.5rem;
   border-radius: var(--radius-full);
   animation: slideIn 0.8s ease-out 0.2s both;
@@ -256,7 +256,7 @@
 .faq-section__underline {
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-green) 100%);
+  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold) 100%);
   margin: 0 auto 1rem;
   border-radius: var(--radius-full);
 }
