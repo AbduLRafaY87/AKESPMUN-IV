@@ -1,5 +1,5 @@
-import React from "react";
-import Hero from "./Hero"; // Assuming Hero component is imported
+// import React from 'react';
+import '../../styles/Team.css';
 import MemberOne from "../../assets/team/teamOne.webp";
 import MemberTwo from "../../assets/team/teamTwo.jpg";
 import MemberThree from "../../assets/team/teamThree.webp";
@@ -13,6 +13,23 @@ import MemberTen from "../../assets/team/teamTen.jpg";
 import MemberEleven from "../../assets/team/teamEleven.jpg";
 import MemberTwelve from "../../assets/team/teamTwelve.jpg";
 
+const Hero = () => {
+  return (
+    <div className="team-hero">
+      <div className="team-hero__container">
+        <div className="team-hero__badge">
+          <span className="team-hero__badge-icon">●</span>
+          THE MINDS BEHIND THE CONFERENCE
+        </div>
+        <h1 className="team-hero__title">Meet the Team</h1>
+        <p className="team-hero__subtitle">
+          Dedicated individuals working together to create an exceptional MUN experience
+        </p>
+      </div>
+      <div className="team-hero__decoration"></div>
+    </div>
+  );
+};
 
 // Team Members Categorized by Department
 const teamData = [
@@ -30,49 +47,67 @@ const teamData = [
     ],
   },
   {
-    department: "DEPARTMENT DIRECTORS",
+    department: "Department Directors",
     members: [
-      { name: "Maham Zubairi", role: "HOPITALITY", image: MemberNine },
+      { name: "Maham Zubairi", role: "Hospitality", image: MemberNine },
       { name: "Waniya Khayyam", role: "IT & Design", image: MemberTen },
       { name: "Anas Raza", role: "Media & Photography", image: MemberEleven },
       { name: "Hasan Sheikh", role: "Social Media", image: MemberTwelve },
-      // { name: "John Doe", role: "Backend Developer", image: MemberNine },
-      // { name: "Jane Smith", role: "UI/UX Designer", image: MemberTen },
     ],
   },
 ];
 
 const TeamPage = () => {
   return (
-    <section className="text-center mb-12 bg-gray-50">
+    <div className="team-page">
       <Hero />
 
-      <div className="max-w-7xl py-5 mx-auto">
-        {teamData.map((team, idx) => (
-          <div key={idx} className="pb-12">
-            <h2 className="text-3xl mt-12 font-bold text-gray-900 mb-12">{team.department}</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
-              {team.members.map((member, index) => (
-                <div
-                  key={index}
-                  className="relative bg-white rounded-xl shadow-lg overflow-hidden group transition-all duration-300 hover:scale-105 hover:shadow-2xl max-w-xs mx-auto"
-                >
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full aspect-[3/4] object-cover hover:scale-110 object-center"
-                  />
-                  <div className="absolute bottom-0 left-0 w-full py-6 bg-gradient-to-t from-black to-transparent opacity-100">
-                    <h3 className="text-lg text-white font-bold">{member.name}</h3>
-                    <p className="text-white border border-slate text-sm bg-[#000] w-fit mx-auto px-2 py-1 rounded-lg">{member.role}</p>
+      <section className="team-content">
+        <div className="team-content__container">
+          {teamData.map((team, idx) => (
+            <div key={idx} className="team-department">
+              
+              {/* Department Header */}
+              <div className="department-header">
+                <div className="department-header__line"></div>
+                <h2 className="department-header__title">{team.department}</h2>
+                <div className="department-header__line"></div>
+              </div>
+
+              {/* Team Members Grid */}
+              <div className="team-grid">
+                {team.members.map((member, index) => (
+                  <div 
+                    key={index} 
+                    className="team-card"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="team-card__image-container">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="team-card__image"
+                      />
+                      <div className="team-card__overlay"></div>
+                    </div>
+                    
+                    <div className="team-card__content">
+                      <h3 className="team-card__name">{member.name}</h3>
+                      <div className="team-card__role-container">
+                        <span className="team-card__role">{member.role}</span>
+                      </div>
+                    </div>
+
+                    {/* Decorative Corner */}
+                    <div className="team-card__corner"></div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 
