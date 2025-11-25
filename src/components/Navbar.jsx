@@ -20,9 +20,9 @@ const Navbar = () => {
   }, []);
 
   // Calculate dynamic styles based on scroll
-  const opacity = Math.min(0.5 + scrollY / 25, 0.95);
+  const opacity = Math.min(0.7 + scrollY / 25, 0.95);
   const shadowOpacity = Math.min(scrollY / 10, 1);
-  const blurIntensity = Math.min(0.3 + scrollY / 1, 10);
+  const blurIntensity = Math.min(2 + scrollY / 1, 10);
 
   const navStyle = {
     backgroundColor: `rgba(27, 59, 47, ${opacity})`,

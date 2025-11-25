@@ -105,7 +105,7 @@ const HomePage = () => {
           <div className="about-section__content">
             <h6 className="about-section__label">About Us</h6>
             <h2 className="about-section__title">
-              AKESP Model United Nation - III
+              AKESP Model United Nation - VI
             </h2>
             <p className="about-section__text">
               Welcome to AKESPMUN, a dynamic Model United Nations conference where diplomacy meets leadership. Our mission is to empower young minds by fostering critical thinking, public speaking, and global awareness. Through engaging debates and thought-provoking discussions, we strive to shape the leaders of tomorrow.
@@ -147,10 +147,9 @@ const HomePage = () => {
             A team of passionate individuals working together to bring innovation,
             creativity, and excellence to this event.
           </p>
-
+          <h2 className='comingSoon'>COMING SOON!</h2>
           {/* Team Images */}
-          <div className="team-section__grid">
-            {/* Member 1 */}
+          {/* <div className="team-section__grid">
             <div className="team-card">
               <div className="team-card__image-wrapper">
                 <img
@@ -161,7 +160,6 @@ const HomePage = () => {
               </div>
             </div>
 
-            {/* Member 2 */}
             <div className="team-card">
               <div className="team-card__image-wrapper">
                 <img
@@ -172,7 +170,6 @@ const HomePage = () => {
               </div>
             </div>
 
-            {/* Member 3 */}
             <div className="team-card">
               <div className="team-card__image-wrapper">
                 <img
@@ -182,7 +179,7 @@ const HomePage = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* View Full Team Button */}
           <div className="team-section__button-wrapper">

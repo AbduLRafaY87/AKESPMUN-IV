@@ -7,8 +7,8 @@
 .hero-carousel {
   position: relative;
   width: 100%;
-  margin-top: 85px;
-  height: 75vh;
+  /* margin-top: 85px; */
+  height: 85vh;
   overflow: hidden;
   background-color: var(--bg-primary);
 }
@@ -101,29 +101,31 @@
 }
 
 .about-section {
-  padding: 6rem 0;
-  background-color: var(--accent-gold);
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 0%);
   position: relative;
 }
 
 .about-section__container {
-  max-width: 1280px;
+  /* display: flex; */
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: 3rem;
 }
 
 .about-section__content {
   width: 100%;
-  text-align: center;
+  text-align: left;
   animation: fadeIn 0.8s ease-out;
 }
 
 .about-section__label {
-  color: var(--text-dark);
+  color: var(--text-secondary);
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -154,7 +156,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 1.75rem;
-  background-color: var(--bg-accent);
+  background-color: var(--accent-green);
   color: var(--text-white);
   font-family: 'Poppins', sans-serif;
   font-size: 1.125rem;
@@ -179,13 +181,14 @@
 .about-section__image-wrapper {
   width: 100%;
   display: flex;
+  height: 100%;
   justify-content: center;
 }
 
 .about-section__image-container {
   position: relative;
-  max-width: 800px;
-  width: 100%;
+  /* max-width: 800px; */
+  height: 100%;
 }
 
 .about-section__image {
@@ -202,8 +205,8 @@
 }
 
 .team-section {
+  background-color: var(--accent-gold);
   padding: 4rem 0;
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   text-align: center;
 }
 
@@ -221,7 +224,7 @@
 }
 
 .team-section__subtitle {
-  color: var(--text-secondary);
+  color: var(--text-white);
   font-size: 1.125rem;
   max-width: 700px;
   margin: 0 auto 2.5rem;

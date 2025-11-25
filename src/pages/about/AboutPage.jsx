@@ -133,8 +133,17 @@ const AboutPage = () => {
             </div>
           </div>
 
+          <div className="content-block iqraBlock">
+            <h2 className="content-title">
+                  All funds raised from registrations and other conference revenues will be directed toward the <span>IQRA Scholarship Program</span> at Aga Khan Higher Secondary School.
+                </h2>
+          </div>
+
         </div>
+        
       </section>
+
+      
 
       {/* ========================================
           FAQ SECTION

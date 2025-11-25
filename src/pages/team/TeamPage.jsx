@@ -15,19 +15,15 @@ import MemberTwelve from "../../assets/team/teamTwelve.jpg";
 
 const Hero = () => {
   return (
-    <div className="team-hero">
-      <div className="team-hero__container">
-        <div className="team-hero__badge">
-          <span className="team-hero__badge-icon">●</span>
-          THE MINDS BEHIND THE CONFERENCE
-        </div>
-        <h1 className="team-hero__title">Meet the Team</h1>
-        <p className="team-hero__subtitle">
+    <section className="about-hero">
+        <div className="about-hero__container">
+          <h1 className="about-hero__title">Our Team</h1>
+          <div className="about-hero__underline"></div>
+          <p className="about-hero__subtitle">
           Dedicated individuals working together to create an exceptional MUN experience
-        </p>
-      </div>
-      <div className="team-hero__decoration"></div>
-    </div>
+          </p>
+        </div>
+      </section>
   );
 };
 
@@ -63,18 +59,17 @@ const TeamPage = () => {
       <Hero />
 
       <section className="team-content">
-        <div className="team-content__container">
+        <h2 className='comingSoon'>COMING SOON!</h2>
+        {/* <div className="team-content__container">
           {teamData.map((team, idx) => (
             <div key={idx} className="team-department">
               
-              {/* Department Header */}
               <div className="department-header">
                 <div className="department-header__line"></div>
                 <h2 className="department-header__title">{team.department}</h2>
                 <div className="department-header__line"></div>
               </div>
 
-              {/* Team Members Grid */}
               <div className="team-grid">
                 {team.members.map((member, index) => (
                   <div 
@@ -98,14 +93,13 @@ const TeamPage = () => {
                       </div>
                     </div>
 
-                    {/* Decorative Corner */}
                     <div className="team-card__corner"></div>
                   </div>
                 ))}
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
     </div>
   );

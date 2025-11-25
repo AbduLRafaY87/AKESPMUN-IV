@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer__column footer__column--branding">
           <img src={logo} alt="AKESPMUN Logo" className="footer__logo" />
           <p className="footer__tagline">Model United Nations - 2025</p>
-          <p className="footer__subtitle">Three Years in the Making</p>
+          <p className="footer__subtitle">Four Years in the Making</p>
           
           {/* Social Icons */}
           <div className="footer__socials">
@@ -41,12 +41,12 @@ const Footer = () => {
           <div className="footer__contact">
             <p className="footer__contact-item">
               <i className="fas fa-envelope"></i>
-              <a href="mailto:central@akesp.org" className="footer__link">central@akesp.org</a>
+              <a href="mailto:central@akesp.org" className="footer__link">akesp.mun@gmail.com</a>
             </p>
-            <p className="footer__contact-item">
+            {/* <p className="footer__contact-item">
               <i className="fas fa-envelope"></i>
               <a href="mailto:akesp_mun_example@akesp.org" className="footer__link">akesp_mun_example@akesp.org</a>
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -70,15 +70,15 @@ const Footer = () => {
       {/* Copyright */}
       <div className="footer__copyright">
         <p>
-          Copyright &copy; <span className="footer__copyright-brand">AKESPMUN III</span> {new Date().getFullYear()}.
-          All rights reserved. Designed & Developed by&nbsp;
+          Copyright &copy; <span className="footer__copyright-brand">AKESPMUN VI</span> {new Date().getFullYear()}.
+          All rights reserved. Designed & Developed by&nbsp;&nbsp;&nbsp;
           <a 
             href="https://www.primecreators.co" 
             target="_blank" 
             rel="noopener noreferrer"
             className="footer__developer"
           >
-            Prime Creators
+            Prime Creators <i class="fa-solid fa-square-arrow-up-right"></i>
           </a>
         </p>
       </div>
