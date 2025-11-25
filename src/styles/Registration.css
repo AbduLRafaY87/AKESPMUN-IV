@@ -586,7 +586,7 @@
   }
 
   .registration-card__image-container {
-    height: 250px;
+    /* height: auto; */
   }
 
   .registration-card__content {
@@ -710,7 +710,7 @@
   }
 
   .registration-card__image-container {
-    height: 200px;
+    /* height: auto; */
   }
 
   .registration-card__content {

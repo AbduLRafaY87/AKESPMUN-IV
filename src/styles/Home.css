@@ -426,6 +426,10 @@
     height: 8px;
   }
 
+.about-section__container {
+  flex-wrap: wrap;
+}
+
   .about-section {
     padding: 3rem 0;
   }
