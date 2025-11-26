@@ -166,7 +166,7 @@ const CommitteesPage = () => {
           <h1 className="committees-hero__title">Committees</h1>
           <div className="committees-hero__underline"></div>
           <p className="committees-hero__subtitle">
-            Explore our diverse range of committees and their study guides
+            Explore our diverse range of committees and their agendas
           </p>
         </div>
       </section>
