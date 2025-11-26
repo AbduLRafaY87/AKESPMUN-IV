@@ -54,7 +54,7 @@ const Footer = () => {
         <div className="footer__column footer__column--map">
           <div className="footer__map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d28950.68572859206!2d67.03462468028049!3d24.90358478564277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d24.8832012!2d67.04943279999999!4m5!1s0x3eb33f6ccec4bcaf%3A0xd26e80f8eafbe7be!2sgoogle%20maps%20aga%20khan%20higher%20secondary%20school%20karachi!3m2!1d24.922750399999998!2d67.06242809999999!5e0!3m2!1sen!2s!4v1739078721772!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d67.0624281!3d24.9227504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f6ccec4bcaf%3A0xd26e80f8eafbe7be!2sAga%20Khan%20Higher%20Secondary%20School%20Karachi!5e0!3m2!1sen!2s!4v0"
               width="100%"
               height="100%"
               style={{ border: '0' }}
