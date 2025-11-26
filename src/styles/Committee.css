@@ -7,7 +7,11 @@
 }
 
 .committees-hero {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-accent) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--bg-secondary) 0%,
+    var(--bg-accent) 100%
+  );
   /* background-color: #eaeaea; */
   padding: 6rem 0 4rem;
   margin-top: 85px;
@@ -18,15 +22,22 @@
 }
 
 .committees-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(46, 204, 113, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(192, 168, 128, 0.1) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(46, 204, 113, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(192, 168, 128, 0.1) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -52,7 +63,11 @@
 .committees-hero__underline {
   width: 120px;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--accent-gold) 0%,
+    var(--accent-gold) 100%
+  );
   margin: 0 auto 1.5rem;
   border-radius: var(--radius-full);
   animation: slideIn 0.8s ease-out 0.2s both;
@@ -82,7 +97,7 @@
   margin: 40px 0 10px;
   font-weight: 700;
   text-align: center;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .committee-category-underline {
@@ -93,7 +108,6 @@
   margin-bottom: 20px;
 }
 
-
 .committees-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px); /* ← force 300px width */
@@ -102,7 +116,6 @@
   text-align: center;
   animation: fadeIn 1s ease-out;
 }
-
 
 .committee-card {
   position: relative;
@@ -125,13 +138,17 @@
 }
 
 .committee-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-green) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--accent-gold) 0%,
+    var(--accent-green) 100%
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
@@ -186,7 +203,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(15, 29, 20, 0.96) 0%, rgba(27, 59, 47, 0.96) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 29, 20, 0.96) 0%,
+    rgba(27, 59, 47, 0.96) 100%
+  );
   opacity: 0;
   /* pointer-events: none; */
   transition: opacity 0.3s ease;
@@ -200,7 +221,7 @@
 .committee-card:hover .committee-card__overlay {
   opacity: 1;
 }
-.committee-card:hover .committee-card__image{
+.committee-card:hover .committee-card__image {
   display: none;
 }
 
@@ -220,7 +241,7 @@
   gap: 0.5rem;
   background-color: var(--accent-gold);
   color: var(--text-dark);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
@@ -289,18 +310,42 @@
   animation: fadeInUp 0.6s ease-out backwards;
 }
 
-.committee-card:nth-child(1) { animation-delay: 0.1s; }
-.committee-card:nth-child(2) { animation-delay: 0.15s; }
-.committee-card:nth-child(3) { animation-delay: 0.2s; }
-.committee-card:nth-child(4) { animation-delay: 0.25s; }
-.committee-card:nth-child(5) { animation-delay: 0.3s; }
-.committee-card:nth-child(6) { animation-delay: 0.35s; }
-.committee-card:nth-child(7) { animation-delay: 0.4s; }
-.committee-card:nth-child(8) { animation-delay: 0.45s; }
-.committee-card:nth-child(9) { animation-delay: 0.5s; }
-.committee-card:nth-child(10) { animation-delay: 0.55s; }
-.committee-card:nth-child(11) { animation-delay: 0.6s; }
-.committee-card:nth-child(12) { animation-delay: 0.65s; }
+.committee-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.committee-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.committee-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.committee-card:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.committee-card:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.committee-card:nth-child(6) {
+  animation-delay: 0.35s;
+}
+.committee-card:nth-child(7) {
+  animation-delay: 0.4s;
+}
+.committee-card:nth-child(8) {
+  animation-delay: 0.45s;
+}
+.committee-card:nth-child(9) {
+  animation-delay: 0.5s;
+}
+.committee-card:nth-child(10) {
+  animation-delay: 0.55s;
+}
+.committee-card:nth-child(11) {
+  animation-delay: 0.6s;
+}
+.committee-card:nth-child(12) {
+  animation-delay: 0.65s;
+}
 
 /* Responsive */
 @media (max-width: 1200px) {
@@ -372,6 +417,10 @@
 
   .committees-hero__title {
     font-size: 2rem;
+  }
+
+  .committee-category-title {
+    font-size: 2.2rem;
   }
 
   .committees-hero__underline {

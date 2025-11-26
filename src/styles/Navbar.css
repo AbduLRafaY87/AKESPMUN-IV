@@ -96,12 +96,17 @@
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
+  outline: none;
   transition: transform 0.3s ease;
 }
 
 .navbar__toggle:hover {
   transform: rotate(90deg);
   color: var(--text-white);
+}
+
+.navbar__toggle:focus{
+  outline: none;
 }
 
 /* Mobile Menu Dropdown */
@@ -121,7 +126,7 @@
 }
 
 .navbar__mobile--open {
-  max-height: 400px;
+  max-height: 450px;
   opacity: 1;
 }
 
