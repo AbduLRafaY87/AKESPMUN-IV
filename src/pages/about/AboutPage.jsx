@@ -56,9 +56,9 @@ const AboutPage = () => {
             <div className="content-block__grid">
               <div className="content-block__text">
                 <div className="content-block__label">Who We Are</div>
-                <h2 className="content-block__title">About AKESPMUN III</h2>
+                <h2 className="content-block__title">About AKESPMUN IV</h2>
                 <p className="content-block__description">
-                  AKESPMUN III is a premier Model United Nations conference, fostering diplomatic
+                  AKESPMUN IV is a premier Model United Nations conference, fostering diplomatic
                   dialogue, leadership, and critical thinking. Our mission is to provide an immersive
                   experience that challenges participants to tackle global issues through debate and collaboration.
                 </p>

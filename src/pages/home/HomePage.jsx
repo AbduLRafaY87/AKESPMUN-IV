@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import '../../styles/Home.css';
 
 // Import carousel images
-import carouselImageOne from '../../assets/carousel/carouselImage1.png';
-import carouselImageTwo from '../../assets/carousel/carouselImage2.png';
-import carouselImageThree from '../../assets/carousel/carouselImage3.png';
-import carouselImageFour from '../../assets/carousel/carouselImage4.png';
-import carouselImageFive from '../../assets/carousel/carouselImage5.png';
+import carouselImageOne from '../../assets/carousel/carouselImage1.webp';
+import carouselImageTwo from '../../assets/carousel/carouselImage2.webp';
+import carouselImageThree from '../../assets/carousel/carouselImage3.webp';
+import carouselImageFour from '../../assets/carousel/carouselImage4.webp';
+import carouselImageFive from '../../assets/carousel/carouselImage5.webp';
 
 // Import other images
 import aboutImage from '../../assets/images/homeAbout.jpg';
@@ -102,7 +102,7 @@ const HomePage = () => {
           <div className="about-section__content">
             <h6 className="about-section__label">About Us</h6>
             <h2 className="about-section__title">
-              AKESP Model United Nation - VI
+              AKESP Model United Nation - IV
             </h2>
             <p className="about-section__text">
               Welcome to AKESPMUN, a dynamic Model United Nations conference where diplomacy meets leadership. Our mission is to empower young minds by fostering critical thinking, public speaking, and global awareness. Through engaging debates and thought-provoking discussions, we strive to shape the leaders of tomorrow.

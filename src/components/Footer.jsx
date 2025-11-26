@@ -70,7 +70,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="footer__copyright">
         <p>
-          Copyright &copy; <span className="footer__copyright-brand">AKESPMUN VI</span> {new Date().getFullYear()}.
+          Copyright &copy; <span className="footer__copyright-brand">AKESPMUN IV</span> {new Date().getFullYear()}.
           All rights reserved. Designed & Developed by&nbsp;&nbsp;&nbsp;
           <a 
             href="https://www.primecreators.co" 

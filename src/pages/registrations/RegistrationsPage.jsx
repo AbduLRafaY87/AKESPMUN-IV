@@ -63,7 +63,7 @@ const RegistrationPage = () => {
           <h1 className="about-hero__title">Registrations</h1>
           <div className="about-hero__underline"></div>
           <p className="about-hero__subtitle">
-            Secure your spot at AKESPMUN VI - Where diplomacy meets excellence
+            Secure your spot at AKESPMUN IV - Where diplomacy meets excellence
           </p>
         </div>
       </section>
