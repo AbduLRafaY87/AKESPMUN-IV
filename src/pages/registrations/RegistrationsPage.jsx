@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import '../../styles/Registration.css';
-import formOne from '../../assets/images/formOne.png';
-import formTwo from '../../assets/images/formTwo.png';
-import formThree from '../../assets/images/formThree.png';
+import formOne from '../../assets/images/formOne.webp';
+import formTwo from '../../assets/images/formTwo.webp';
+import formThree from '../../assets/images/formThree.webp';
 
 const registrationCategories = [
   { 
