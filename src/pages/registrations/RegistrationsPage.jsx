@@ -5,21 +5,21 @@ import formTwo from '../../assets/images/formTwo.webp';
 import formThree from '../../assets/images/formThree.webp';
 
 const registrationCategories = [
-  { 
-    title: "Lead Marketeer", 
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSf9svZm4s87GiFE_4nLVLl5sV4X1X20J7c-WZ0jo2eOggzEog/viewform", 
+  {
+    title: "Lead Marketeer",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSf9svZm4s87GiFE_4nLVLl5sV4X1X20J7c-WZ0jo2eOggzEog/viewform",
     image: formThree,
     description: "Bring your team and compete together as a unified delegation"
   },
-  { 
-    title: "Individual Delegate", 
-    link: "https://docs.google.com/forms/d/e/1FAIpQLScz1KIYSBKRldDVgayt591A-JdwAveK5ywjRnBUrX6l4kvALw/viewform", 
+  {
+    title: "Individual Delegate",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScz1KIYSBKRldDVgayt591A-JdwAveK5ywjRnBUrX6l4kvALw/viewform",
     image: formTwo,
     description: "Register as a solo participant and represent a nation independently"
   },
-  { 
-    title: "Delegation", 
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSeBAOAinkQWtICQpcllAetdyqfun0_jjxDJi9-rAW57jfSY_w/viewform", 
+  {
+    title: "Delegation",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSeBAOAinkQWtICQpcllAetdyqfun0_jjxDJi9-rAW57jfSY_w/viewform",
     image: formOne,
     description: "Bring your team and compete together as a unified delegation"
   },
@@ -50,7 +50,7 @@ const RegistrationPage = () => {
 
   // Early Bird Ends: 15 Jan 2026
   const [earlyBirdTime, setEarlyBirdTime] = useState(
-    calculateTimeLeft("2026-01-15T23:59:59")
+    calculateTimeLeft("2025-12-15T23:59:59")
   );
 
   // Registration Ends: 20 Jan 2026
@@ -60,7 +60,7 @@ const RegistrationPage = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setEarlyBirdTime(calculateTimeLeft("2026-01-15T23:59:59"));
+      setEarlyBirdTime(calculateTimeLeft("2025-12-15T23:59:59"));
       setTimeLeft(calculateTimeLeft("2026-01-20T00:00:00"));
     }, 1000);
 
@@ -149,7 +149,7 @@ const RegistrationPage = () => {
 
                   <div className="registration-card__content">
                     <h3 className="registration-card__title">{category.title}</h3>
-                    <a 
+                    <a
                       href={category.link}
                       target="_blank"
                       rel="noopener noreferrer"
