@@ -26,37 +26,54 @@ const registrationCategories = [
 ];
 
 const RegistrationPage = () => {
-  // Calculate time left for main deadline
-  const calculateTimeLeft = (deadline) => {
-    const deadlineTime = new Date(deadline).getTime();
-    const now = new Date().getTime();
-    const difference = deadlineTime - now;
 
-    if (difference > 0) {
-      return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    } else {
+  // ============================
+  // Countdown Logic
+  // ============================
+
+  const calculateTimeLeft = (deadline) => {
+    const target = new Date(deadline).getTime();
+    const now = Date.now();
+    const diff = target - now;
+
+    if (diff <= 0) {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
+
+    return {
+      days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((diff / (1000 * 60)) % 60),
+      seconds: Math.floor((diff / 1000) % 60),
+    };
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft("2026-01-20T00:00:00"));
-  const [earlyBirdTime, setEarlyBirdTime] = useState(calculateTimeLeft("2025-12-15T23:59:59"));
+  // Early Bird Ends: 15 Jan 2026
+  const [earlyBirdTime, setEarlyBirdTime] = useState(
+    calculateTimeLeft("2026-01-15T23:59:59")
+  );
+
+  // Registration Ends: 20 Jan 2026
+  const [timeLeft, setTimeLeft] = useState(
+    calculateTimeLeft("2026-01-20T00:00:00")
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft("2026-01-23T00:00:00"));
-      setEarlyBirdTime(calculateTimeLeft("2025-12-31T23:59:59"));
+      setEarlyBirdTime(calculateTimeLeft("2026-01-15T23:59:59"));
+      setTimeLeft(calculateTimeLeft("2026-01-20T00:00:00"));
     }, 1000);
+
     return () => clearInterval(timer);
   }, []);
 
+  // ============================
+  // UI Rendering
+  // ============================
+
   return (
     <div className="registration-page">
+
       {/* Hero Section */}
       <section className="about-hero">
         <div className="about-hero__container">
@@ -68,11 +85,10 @@ const RegistrationPage = () => {
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="registration-content">
         <div className="registration-content__container">
-          
-          {/* Early Bird Discount Section - Priority */}
+
+          {/* Early Bird Discount Section */}
           <div className="discount-section">
             <div className="discount-section__badge">
               <i className="fas fa-bolt"></i>
@@ -80,10 +96,10 @@ const RegistrationPage = () => {
             </div>
             <h2 className="discount-section__title">Save 25% on Registration</h2>
             <p className="discount-section__subtitle">Limited time offer expires in:</p>
-            
+
             <div className="counter-grid counter-grid--premium">
-              {Object.entries(earlyBirdTime).map(([unit, value], index) => (
-                <div key={index} className="counter-card counter-card--premium">
+              {Object.entries(earlyBirdTime).map(([unit, value], i) => (
+                <div key={i} className="counter-card counter-card--premium">
                   <div className="counter-card__inner">
                     <span className="counter-card__value">{String(value).padStart(2, '0')}</span>
                     <span className="counter-card__label">{unit}</span>
@@ -93,16 +109,16 @@ const RegistrationPage = () => {
             </div>
           </div>
 
-          {/* Main Deadline Counter */}
+          {/* Final Registration Deadline */}
           <div className="deadline-section">
             <div className="deadline-section__header">
               <h3 className="deadline-section__title">Registration Closes</h3>
               <p className="deadline-section__date">January 20, 2026</p>
             </div>
-            
+
             <div className="counter-grid">
-              {Object.entries(timeLeft).map(([unit, value], index) => (
-                <div key={index} className="counter-card">
+              {Object.entries(timeLeft).map(([unit, value], i) => (
+                <div key={i} className="counter-card">
                   <div className="counter-card__inner">
                     <span className="counter-card__value">{String(value).padStart(2, '0')}</span>
                     <span className="counter-card__label">{unit}</span>
@@ -115,30 +131,27 @@ const RegistrationPage = () => {
           {/* Registration Categories */}
           <div className="registration-categories">
             <div className="registration-categories__header">
-              <h2 className="registration-categories__title">Register Now and get ready for a <span>remarkable</span> MUN experience!</h2>
+              <h2 className="registration-categories__title">
+                Register Now and get ready for a <span>remarkable</span> MUN experience!
+              </h2>
               <p className="registration-categories__subtitle">
                 Select the registration type that best fits your goals
               </p>
             </div>
-            
+
             <div className="registration-grid">
               {registrationCategories.map((category, index) => (
                 <div key={index} className="registration-card">
                   <div className="registration-card__image-container">
-                    <img 
-                      src={category.image} 
-                      // alt={category.title} 
-                      className="registration-card__image"
-                    />
+                    <img src={category.image} className="registration-card__image" />
                     <div className="registration-card__gradient"></div>
                   </div>
-                  
+
                   <div className="registration-card__content">
                     <h3 className="registration-card__title">{category.title}</h3>
-                    {/* <p className="registration-card__description">{category.description}</p> */}
                     <a 
-                      href={category.link} 
-                      target="_blank" 
+                      href={category.link}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="registration-card__button"
                     >
@@ -146,6 +159,7 @@ const RegistrationPage = () => {
                       <i className="fas fa-arrow-right"></i>
                     </a>
                   </div>
+
                 </div>
               ))}
             </div>

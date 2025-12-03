@@ -7,21 +7,46 @@ import missionImg from '../../assets/images/mission.jpg';
 const faqs = [
   {
     question: "What is AKESPMUN?",
-    answer: "AKESPMUN is a premier Model United Nations conference that fosters diplomacy, leadership, and critical thinking among students.",
+    answer:
+      "AKESPMUN is a premier Model United Nations conference that promotes diplomacy, leadership, and critical thinking by engaging students in global issues through debate and collaboration.",
   },
   {
     question: "Who can participate?",
-    answer: "Students from high schools and universities are welcome to participate in AKESPMUN.",
+    answer:
+      "Students of any academic level are welcome to participate, as long as they are of an appropriate age and maturity to engage in formal debate. This includes students below high school level as well.",
+  },
+  {
+    question: "Do I need prior MUN experience to join?",
+    answer:
+      "No prior experience is required. AKESPMUN welcomes both beginners and seasoned delegates, providing guidance and a supportive environment for all participants.",
   },
   {
     question: "How can I register?",
-    answer: "You can register through our website by filling out the registration form on the 'Registrations' page.",
+    answer:
+      "You can register through our website by completing the registration form on the ‘Registrations’ page. Make sure to submit all required details before the deadline.",
   },
   {
     question: "What are the benefits of participating?",
-    answer: "Participants develop public speaking, negotiation, and leadership skills while engaging in discussions on global issues.",
+    answer:
+      "Delegates gain valuable skills such as public speaking, research, diplomacy, negotiation, and critical thinking, while also expanding their global awareness.",
+  },
+  {
+    question: "Is there a registration fee?",
+    answer:
+      "Yes, a registration fee applies to all delegates. All funds raised support the IQRA Scholarship Program at Aga Khan Higher Secondary School.",
+  },
+  {
+    question: "What committees will be offered?",
+    answer:
+      "AKESPMUN features a diverse range of committees, each focusing on unique global challenges. The full list of committees and their agendas is available on the ‘Committees’ page.",
+  },
+  {
+    question: "What should participants bring?",
+    answer:
+      "Delegates should bring a notebook, writing materials, their position paper (if required), and any research they may need during debate sessions.",
   },
 ];
+
 
 const AboutPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
