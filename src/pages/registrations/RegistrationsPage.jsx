@@ -48,9 +48,9 @@ const RegistrationPage = () => {
     };
   };
 
-  // Early Bird Ends: 15 Jan 2026
+  // Early Bird Ends: 25 Dec 2026
   const [earlyBirdTime, setEarlyBirdTime] = useState(
-    calculateTimeLeft("2025-12-15T23:59:59")
+    calculateTimeLeft("2025-12-25T23:59:59")
   );
 
   // Registration Ends: 20 Jan 2026
