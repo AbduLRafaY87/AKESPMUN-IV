@@ -228,6 +228,7 @@
 .committee-card__title {
   color: var(--text-white);
   font-size: 1.25rem;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 700;
   text-align: center;
   margin-bottom: 1.5rem;

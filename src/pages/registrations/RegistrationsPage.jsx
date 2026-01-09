@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import '../../styles/Registration.css';
 import formOne from '../../assets/images/formOne.webp';
 import formTwo from '../../assets/images/formTwo.webp';
-import formThree from '../../assets/images/formThree.webp';
+// import formThree from '../../assets/images/formThree.webp';
 
 const registrationCategories = [
   {
@@ -48,10 +48,10 @@ const RegistrationPage = () => {
     };
   };
 
-  // Early Bird Ends: 25 Dec 2026
-  const [earlyBirdTime, setEarlyBirdTime] = useState(
-    calculateTimeLeft("2025-12-25T23:59:59")
-  );
+  // // Early Bird Ends: 25 Dec 2026
+  // const [earlyBirdTime, setEarlyBirdTime] = useState(
+  //   calculateTimeLeft("2025-12-25T23:59:59")
+  // );
 
   // Registration Ends: 20 Jan 2026
   const [timeLeft, setTimeLeft] = useState(
@@ -60,7 +60,7 @@ const RegistrationPage = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setEarlyBirdTime(calculateTimeLeft("2025-12-25T23:59:59"));
+      // setEarlyBirdTime(calculateTimeLeft("2025-12-25T23:59:59"));
       setTimeLeft(calculateTimeLeft("2026-01-20T00:00:00"));
     }, 1000);
 
@@ -89,7 +89,7 @@ const RegistrationPage = () => {
         <div className="registration-content__container">
 
           {/* Early Bird Discount Section */}
-          <div className="discount-section">
+          {/* <div className="discount-section">
             <div className="discount-section__badge">
               <i className="fas fa-bolt"></i>
               EARLY BIRD SPECIAL
@@ -107,7 +107,7 @@ const RegistrationPage = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Final Registration Deadline */}
           <div className="deadline-section">
