@@ -12,13 +12,13 @@ const committeeCategories = [
         name: "Pakistan National Assembly",
         image: "/committees/PNA.png",
         agenda: "Status of Democracy: Addressing the Situation of the Various Resistance Movements Present in Pakistan",
-        pdf: "/study-guides/pna.pdf",
+        pdf: "https://drive.google.com/file/d/1O1HcdNW4AA9yMTkjROpxT4Uw4HzPxLI7/view?usp=drive_link", // Set to null to disable
       },
       {
         name: "Pakistan Cabinet Crisis",
         image: "/committees/PCC.png",
         agenda: "Boots are calling",
-        pdf: "/study-guides/pna.pdf",
+        pdf: null, // Add your drive link
       },
     ],
   },
@@ -30,19 +30,19 @@ const committeeCategories = [
         name: "Special Political and Decolonization Committee",
         image: "/committees/SPECPOL.png",
         agenda: "The Question of Western Sahara",
-        pdf: "/study-guides/specpol.pdf",
+        pdf: "https://drive.google.com/file/d/1NDYT9mRO6TeHybzRZFfJpm81RVc_lOZO/view?usp=drive_link",
       },
       {
         name: "Disarmament and International Security Committee",
         image: "/committees/DISEC.png",
         agenda: "From the Dawn of Destruction: Ensuring Compliance with the Nuclear Non-Proliferation Treaty",
-        pdf: "/study-guides/disec.pdf",
+        pdf: "https://drive.google.com/file/d/1gOsONv5qONqc8YZJ_SRHTq1be6VrYxGj/view?usp=drive_link",
       },
       {
         name: "Social, Humanitarian and Cultural Committee",
         image: "/committees/SOCHUM.png",
         agenda: "The Rohingya Crisis: Strengthening Justice and Human Rights in Myanmar",
-        pdf: "/study-guides/sochum.pdf",
+        pdf: "https://drive.google.com/file/d/1JF-Yo0FovHpo_hWaqqgBw9P8aBvhi0LN/view?usp=drive_link",
       },
     ],
   },
@@ -54,48 +54,48 @@ const committeeCategories = [
         name: "United Nations Security Council",
         image: "/committees/UNSC.png",
         agenda: "A Throne Stained in Gunpowder: Questioning the Legitimacy of UNSC Resolution 2799 (2025)",
-        pdf: "/study-guides/unsc.pdf",
+        pdf: 'https://drive.google.com/file/d/1i2H52SgznUbzvdXrGuBszCeiQ4dXcQ46/view?usp=drive_link',
       },
       {
         name: "Economic and Social Council",
         image: "/committees/ECOSOC.png",
         agenda: "Accelerating Sustainable Development in Landlocked Developing Countries through Regional Cooperation and Infrastructure Investment",
-        pdf: "/study-guides/ecosoc.pdf",
+        pdf: "https://drive.google.com/file/d/1rWX4nbyBE1ukV45CDFFMO16xi8QVJbCi/view?usp=drive_link",
       },
       {
         name: "International Court of Justice",
         image: "/committees/ICJ.png",
         agenda: "Application of the Convention on the Prevention and Punishment of the Crime of Genocide in Sudan (Sudan v. United Arab Emirates)",
-        pdf: "/study-guides/icj.pdf",
+        pdf: "https://drive.google.com/file/d/13xbnLeOXD6c-ZsjasmLZ4rFYT7arQFx2/view?usp=drive_link",
       }
     ]
   },
-    {
+  {
     category: "Regional Bodies",
     committees: [
       {
         name: "United Nations Commission on the Status of Women",
         image: "/committees/UNSCW.png",
         agenda: "Faith, Culture, and Gender: Protecting Women Against Discrimination in Cultural Practices",
-        pdf: "/study-guides/uncsw.pdf",
+        pdf: "https://drive.google.com/file/d/1oXNTLIVEQ8YvK5Hgif8CZKoKiija9_1D/view?usp=drive_link",
       },
       {
         name: "United Nations Childrens Fund",
         image: "/committees/UNICEF.png",
         agenda: "Child Soldiers in the MEA region",
-        pdf: "/study-guides/pna.pdf",
+        pdf: 'https://drive.google.com/file/d/1wYMi0c_QmeH2383pewjQYFldO0EeQPzG/view?usp=drive_link',
       },
       {
         name: "United Nations Environment Assembly",
         image: "/committees/UNEA.png",
         agenda: "Zero Hunger: Strategies for Advancing SDG 2 and Global Food Security",
-        pdf: "/study-guides/pna.pdf",
+        pdf: 'https://drive.google.com/file/d/1DE1WCp2AkvEYTegreGilkUsBdHXE9Eit/view?usp=drive_link',
       },
       {
         name: "World Health Organization",
         image: "/committees/WHO.png",
         agenda: "Joint Call to Strengthen Policy and Investment for Child and Youth Mental Health and Well-being",
-        pdf: "/study-guides/pna.pdf",
+        pdf: 'https://drive.google.com/file/d/127jhx-Rvmw1_cduNFN3kuU3sgHKZIKCq/view?usp=drive_link',
       },
     ]
   },
@@ -122,9 +122,7 @@ const CommitteeCard = ({ name, image, agenda, pdf }) => {
       tiltMaxAngleY={8}
       className="committee-card-tilt"
     >
-      <div
-        className="committee-card"
-      >
+      <div className="committee-card">
         <div className="committee-card__content">
           <img
             src={image}
@@ -136,13 +134,27 @@ const CommitteeCard = ({ name, image, agenda, pdf }) => {
             }}
           />
 
-          {/* Hover Overlay - Always rendered, controlled by CSS */}
+          {/* Hover Overlay */}
           <div className="committee-card__overlay">
             <h3 className="committee-card__title">{agenda}</h3>
-            {/* <a href={pdf} target="_blank" rel="noopener noreferrer" className="committee-card__badge">
-              <i className="fas fa-file-pdf"></i>
-              <span href=''>Study Guide</span>
-            </a> */}
+            
+            {/* Conditional PDF Button */}
+            {pdf ? (
+              <a 
+                href={pdf} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="committee-card__badge"
+              >
+                <i className="fas fa-file-pdf"></i>
+                <span>Study Guide</span>
+              </a>
+            ) : (
+              <div className="committee-card__badge committee-card__badge--disabled">
+                <i className="fas fa-file-pdf"></i>
+                <span>Coming Soon</span>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -153,7 +165,8 @@ const CommitteeCard = ({ name, image, agenda, pdf }) => {
 CommitteeCard.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  pdf: PropTypes.string.isRequired,
+  agenda: PropTypes.string.isRequired,
+  pdf: PropTypes.string, // Made optional since it can be null
 };
 
 // Main Committees Page Component
