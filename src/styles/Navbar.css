@@ -3,6 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  top: 48px;
   width: 100%;
   z-index: 1000;
   transition: all 0.4s ease;
@@ -173,5 +174,17 @@
   
   .navbar__container {
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    top: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    top: 40px;
   }
 }

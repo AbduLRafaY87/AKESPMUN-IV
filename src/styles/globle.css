@@ -407,3 +407,21 @@ a:hover {
 ::-webkit-scrollbar-corner {
   background: var(--bg-secondary);
 }
+
+/* Add ~48px to existing margin-top values */
+.hero-carousel,
+.about-hero,
+.committees-hero,
+.registration-hero,
+.contact-hero,
+.team-hero {
+  margin-top: calc(85px + 48px); /* Original + banner height */
+}
+
+@media (max-width: 768px) {
+  margin-top: calc(75px + 44px);
+}
+
+@media (max-width: 480px) {
+  margin-top: calc(70px + 40px);
+}
