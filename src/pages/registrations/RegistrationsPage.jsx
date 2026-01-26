@@ -113,7 +113,7 @@ const RegistrationPage = () => {
           <div className="deadline-section">
             <div className="deadline-section__header">
               <h3 className="deadline-section__title">Registration Closes</h3>
-              <p className="deadline-section__date">January 26, 2026</p>
+              <p className="deadline-section__date">January 28, 2026</p>
             </div>
 
             <div className="counter-grid">
