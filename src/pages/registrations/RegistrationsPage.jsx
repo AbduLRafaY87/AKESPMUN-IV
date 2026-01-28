@@ -5,18 +5,18 @@ import formTwo from '../../assets/images/formTwo.webp';
 // import formThree from '../../assets/images/formThree.webp';
 
 const registrationCategories = [
-  {
-    title: "Individual Delegate",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLScz1KIYSBKRldDVgayt591A-JdwAveK5ywjRnBUrX6l4kvALw/viewform",
-    image: formTwo,
-    description: "Register as a solo participant and represent a nation independently"
-  },
-  {
-    title: "Delegation",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSeBAOAinkQWtICQpcllAetdyqfun0_jjxDJi9-rAW57jfSY_w/viewform",
-    image: formOne,
-    description: "Bring your team and compete together as a unified delegation"
-  }
+  // {
+  //   title: "Individual Delegate",
+  //   link: "https://docs.google.com/forms/d/e/1FAIpQLScz1KIYSBKRldDVgayt591A-JdwAveK5ywjRnBUrX6l4kvALw/viewform",
+  //   image: formTwo,
+  //   description: "Register as a solo participant and represent a nation independently"
+  // },
+  // {
+  //   title: "Delegation",
+  //   link: "https://docs.google.com/forms/d/e/1FAIpQLSeBAOAinkQWtICQpcllAetdyqfun0_jjxDJi9-rAW57jfSY_w/viewform",
+  //   image: formOne,
+  //   description: "Bring your team and compete together as a unified delegation"
+  // }
     // {
   //   title: "Lead Marketeer",
   //   link: "https://docs.google.com/forms/d/e/1FAIpQLSf9svZm4s87GiFE_4nLVLl5sV4X1X20J7c-WZ0jo2eOggzEog/viewform",
