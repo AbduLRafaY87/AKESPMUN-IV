@@ -265,6 +265,25 @@
   transform: scale(1.05);
 }
 
+.committee-card__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.committee-card__badge--facebook {
+  background-color: #1877f2;
+  color: var(--text-white);
+}
+
+.committee-card:hover .committee-card__badge--facebook {
+  background-color: #166fe5;
+  color: var(--text-white);
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;

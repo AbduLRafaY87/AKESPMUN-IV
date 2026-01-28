@@ -12,13 +12,15 @@ const committeeCategories = [
         name: "Pakistan National Assembly",
         image: "/committees/PNA.png",
         agenda: "Status of Democracy: Addressing the Situation of the Various Resistance Movements Present in Pakistan",
-        pdf: "https://drive.google.com/file/d/1O1HcdNW4AA9yMTkjROpxT4Uw4HzPxLI7/view?usp=drive_link", // Set to null to disable
+        pdf: "https://drive.google.com/file/d/1O1HcdNW4AA9yMTkjROpxT4Uw4HzPxLI7/view?usp=drive_link",
+        facebook: "https://www.facebook.com/groups/900564405788832/?ref=share&mibextid=NSMWBT",
       },
       {
         name: "Pakistan Cabinet Crisis",
         image: "/committees/PCC.png",
         agenda: "Boots are calling",
-        pdf: null, // Add your drive link
+        pdf: null,
+        facebook: "https://www.facebook.com/groups/2141681779904356/?ref=share&mibextid=NSMWBT",
       },
     ],
   },
@@ -31,18 +33,21 @@ const committeeCategories = [
         image: "/committees/SPECPOL.png",
         agenda: "The Question of Western Sahara",
         pdf: "https://drive.google.com/file/d/1NDYT9mRO6TeHybzRZFfJpm81RVc_lOZO/view?usp=drive_link",
+        facebook: "https://www.facebook.com/groups/1433177118209173/?ref=share&mibextid=NSMWBT",
       },
       {
         name: "Disarmament and International Security Committee",
         image: "/committees/DISEC.png",
         agenda: "From the Dawn of Destruction: Ensuring Compliance with the Nuclear Non-Proliferation Treaty",
         pdf: "https://drive.google.com/file/d/1gOsONv5qONqc8YZJ_SRHTq1be6VrYxGj/view?usp=drive_link",
+        facebook: "https://www.facebook.com/groups/1993745647875201/?ref=share&mibextid=NSMWBT",
       },
       {
         name: "Social, Humanitarian and Cultural Committee",
         image: "/committees/SOCHUM.png",
         agenda: "The Rohingya Crisis: Strengthening Justice and Human Rights in Myanmar",
         pdf: "https://drive.google.com/file/d/1JF-Yo0FovHpo_hWaqqgBw9P8aBvhi0LN/view?usp=drive_link",
+        facebook: "https://www.facebook.com/groups/1243800847676443/?ref=share&mibextid=NSMWBT",
       },
     ],
   },
@@ -55,18 +60,21 @@ const committeeCategories = [
         image: "/committees/UNSC.png",
         agenda: "A Throne Stained in Gunpowder: Questioning the Legitimacy of UNSC Resolution 2799 (2025)",
         pdf: 'https://drive.google.com/file/d/1i2H52SgznUbzvdXrGuBszCeiQ4dXcQ46/view?usp=drive_link',
+        facebook: "https://www.facebook.com/groups/2008476627217579/?ref=share&mibextid=NSMWBT",
       },
       {
         name: "Economic and Social Council",
         image: "/committees/ECOSOC.png",
         agenda: "Accelerating Sustainable Development in Landlocked Developing Countries through Regional Cooperation and Infrastructure Investment",
         pdf: "https://drive.google.com/file/d/1rWX4nbyBE1ukV45CDFFMO16xi8QVJbCi/view?usp=drive_link",
+        facebook: "https://www.facebook.com/groups/869905505843494/?ref=share&mibextid=NSMWBT",
       },
       {
         name: "International Court of Justice",
         image: "/committees/ICJ.png",
         agenda: "Application of the Convention on the Prevention and Punishment of the Crime of Genocide in Sudan (Sudan v. United Arab Emirates)",
         pdf: "https://drive.google.com/file/d/13xbnLeOXD6c-ZsjasmLZ4rFYT7arQFx2/view?usp=drive_link",
+        facebook: "https://www.facebook.com/groups/1254544156567573/?ref=share&mibextid=NSMWBT",
       }
     ]
   },
@@ -78,24 +86,28 @@ const committeeCategories = [
         image: "/committees/UNSCW.png",
         agenda: "Faith, Culture, and Gender: Protecting Women Against Discrimination in Cultural Practices",
         pdf: "https://drive.google.com/file/d/1oXNTLIVEQ8YvK5Hgif8CZKoKiija9_1D/view?usp=drive_link",
+        facebook: "https://www.facebook.com/groups/1224627392974594/?ref=share&mibextid=NSMWBT",
       },
       {
         name: "United Nations Childrens Fund",
         image: "/committees/UNICEF.png",
         agenda: "Child Soldiers in the MEA region",
         pdf: 'https://drive.google.com/file/d/1wYMi0c_QmeH2383pewjQYFldO0EeQPzG/view?usp=drive_link',
+        facebook: "https://www.facebook.com/groups/1566677867875504/?ref=share&mibextid=NSMWBT",
       },
       {
         name: "United Nations Environment Assembly",
         image: "/committees/UNEA.png",
         agenda: "Zero Hunger: Strategies for Advancing SDG 2 and Global Food Security",
         pdf: 'https://drive.google.com/file/d/1DE1WCp2AkvEYTegreGilkUsBdHXE9Eit/view?usp=drive_link',
+        facebook: "https://www.facebook.com/groups/25541554948859336/?ref=share&mibextid=NSMWBT",
       },
       {
         name: "World Health Organization",
         image: "/committees/WHO.png",
         agenda: "Joint Call to Strengthen Policy and Investment for Child and Youth Mental Health and Well-being",
         pdf: 'https://drive.google.com/file/d/1wDhmSwYMw0BkXHkaFLeaNJNS7T4P8ZMv/view?usp=drive_link',
+        facebook: "https://www.facebook.com/groups/877542488539805/?ref=share&mibextid=NSMWBT",
       },
     ]
   },
@@ -103,7 +115,7 @@ const committeeCategories = [
 
 
 // Committee Card Component
-const CommitteeCard = ({ name, image, agenda, pdf }) => {
+const CommitteeCard = ({ name, image, agenda, pdf, facebook }) => {
   const [tiltEnabled, setTiltEnabled] = useState(window.innerWidth > 768);
 
   useEffect(() => {
@@ -138,23 +150,39 @@ const CommitteeCard = ({ name, image, agenda, pdf }) => {
           <div className="committee-card__overlay">
             <h3 className="committee-card__title">{agenda}</h3>
             
-            {/* Conditional PDF Button */}
-            {pdf ? (
-              <a 
-                href={pdf} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="committee-card__badge"
-              >
-                <i className="fas fa-file-pdf"></i>
-                <span>Study Guide</span>
-              </a>
-            ) : (
-              <div className="committee-card__badge committee-card__badge--disabled">
-                <i className="fas fa-file-pdf"></i>
-                <span>Coming Soon</span>
-              </div>
-            )}
+            {/* Buttons Container */}
+            <div className="committee-card__buttons">
+              {/* Conditional PDF Button */}
+              {pdf ? (
+                <a 
+                  href={pdf} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="committee-card__badge"
+                >
+                  <i className="fas fa-file-pdf"></i>
+                  <span>Study Guide</span>
+                </a>
+              ) : (
+                <div className="committee-card__badge committee-card__badge--disabled">
+                  <i className="fas fa-file-pdf"></i>
+                  <span>Coming Soon</span>
+                </div>
+              )}
+
+              {/* Facebook Button */}
+              {facebook && (
+                <a 
+                  href={facebook} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="committee-card__badge committee-card__badge--facebook"
+                >
+                  <i className="fab fa-facebook-f"></i>
+                  <span>Facebook Group</span>
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -166,7 +194,8 @@ CommitteeCard.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   agenda: PropTypes.string.isRequired,
-  pdf: PropTypes.string, // Made optional since it can be null
+  pdf: PropTypes.string,
+  facebook: PropTypes.string,
 };
 
 // Main Committees Page Component
