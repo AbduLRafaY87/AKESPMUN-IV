@@ -95,7 +95,7 @@ const committeeCategories = [
         name: "World Health Organization",
         image: "/committees/WHO.png",
         agenda: "Joint Call to Strengthen Policy and Investment for Child and Youth Mental Health and Well-being",
-        pdf: 'https://drive.google.com/file/d/127jhx-Rvmw1_cduNFN3kuU3sgHKZIKCq/view?usp=drive_link',
+        pdf: '#',
       },
     ]
   },
