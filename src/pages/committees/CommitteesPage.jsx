@@ -19,7 +19,7 @@ const committeeCategories = [
         name: "Pakistan Cabinet Crisis",
         image: "/committees/PCC.png",
         agenda: "Boots are calling",
-        pdf: null,
+        pdf: "https://drive.google.com/file/d/1yl26jzfqYYYts_EOBh23no-LFzLVVLJr/view?usp=drive_link",
         facebook: "https://www.facebook.com/groups/2141681779904356/?ref=share&mibextid=NSMWBT",
       },
     ],
@@ -149,15 +149,15 @@ const CommitteeCard = ({ name, image, agenda, pdf, facebook }) => {
           {/* Hover Overlay */}
           <div className="committee-card__overlay">
             <h3 className="committee-card__title">{agenda}</h3>
-            
+
             {/* Buttons Container */}
             <div className="committee-card__buttons">
               {/* Conditional PDF Button */}
               {pdf ? (
-                <a 
-                  href={pdf} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="committee-card__badge"
                 >
                   <i className="fas fa-file-pdf"></i>
@@ -172,10 +172,10 @@ const CommitteeCard = ({ name, image, agenda, pdf, facebook }) => {
 
               {/* Facebook Button */}
               {facebook && (
-                <a 
-                  href={facebook} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="committee-card__badge committee-card__badge--facebook"
                 >
                   <i className="fab fa-facebook-f"></i>
