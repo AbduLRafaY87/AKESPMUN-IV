@@ -49,6 +49,8 @@ const Navbar = () => {
     { path: '/team', label: 'Team' },
     { path: '/about', label: 'About AKESPMUN' },
     { path: '/contact', label: 'Contact Us' }
+    { path: 'https://drive.google.com/file/d/149z2zLDiK6-wR4y2eC-b56w5fh9hfBVE/view', label: 'Accord' }
+    { path: '/contact', label: 'Contact Us' }
   ];
 
   return (
