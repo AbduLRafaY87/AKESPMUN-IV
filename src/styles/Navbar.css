@@ -58,7 +58,7 @@
 .navbar__menu {
   display: flex;
   list-style: none;
-  gap: 1.5rem; /* More space between items */
+  gap: .1rem; /* More space between items */
   margin: 0;
   padding: 0;
 }
